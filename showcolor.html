@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>
+			Show Colour
+		</title>
+		
+		<script>
+			
+			function add() {
+				var val = document.getElementById("val");
+				if(val.value == "" || val.value == null) {
+					alert("Colour must be input.");
+				} else {
+				    var basediv = document.getElementById("basediv");
+				    basediv.innerHTML = basediv.innerHTML + "<div style='height:20px; width:200px; background-color: " + val.value +"'> </div>"
+				}
+			}
+			
+			function rest() {
+			}
+		</script>
+	</head>
+	
+	<body>
+		<div id="basediv">
+		    <input type="text" id="val"/>
+			<input type="button" value="Add" onclick="javascript:add()"/>
+			</div>
+		</div>
+	</body>
+</html>
